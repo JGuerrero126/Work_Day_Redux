@@ -1,5 +1,5 @@
 import { Box, Button, Textarea, Text } from "@chakra-ui/react";
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import moment from "moment";
 
 const TimeBlock = ({ time, index }) => {
@@ -24,19 +24,14 @@ const TimeBlock = ({ time, index }) => {
     setInterval(() => {
       timeCheck(currentEl);
     }, 60000);
-  }, []);
+  }, [index]);
 
   return (
     <div className="timeBlock">
       <Box className="timeArea">
         <Text currenttime={time}>{time}</Text>
       </Box>
-      <Textarea
-        id={index}
-        onChange={(e) => timeCheck(e.target)}
-        data-index={index}
-        className="timeText"
-      />
+      <Textarea id={index} data-index={index} className="timeText" />
       <Button className="timeButton">TEST</Button>
     </div>
   );
