@@ -21,16 +21,17 @@ body {
 }
 
 .timeBlock {
-  display: inline-block;
-  width: 100%;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  display: block;
+  text-align: center;
+  white-space: pre-wrap;
+  height: 5rem;
+  margin-bottom: 0.5rem;
 }
 
 .timeArea {
   display: inline-block;
   width: 5rem;
-  height: 5rem;
+  height: inherit;
   background-color: aquamarine;
   text-align: center;
   border-top: 0.1rem dashed black;
@@ -38,19 +39,30 @@ body {
 }
 
 .timeText {
-  display: inline-block;
   min-width: 50%;
-  height: 5em;
+  height: inherit;
   background: transparent;
-  /* border: none; */
+  border: none;
   resize: none;
+  white-space: pre-wrap;
   color: #000000;
+  margin-bottom: -3.25rem;
 }
 
 .timeButton {
-  display: inline-block;
+  /* display: inline-block; */
   width: 5rem;
-  height: 5rem;
+  height: inherit;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+  margin-bottom: -4rem;
+}
+
+.timeButton:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .past {
