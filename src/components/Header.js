@@ -1,11 +1,12 @@
+import { Heading, Text } from "@chakra-ui/react";
 import moment from "moment";
 import React from "react";
 
 const Header = () => {
   return (
     <div>
-      <header className="heading">Work Day Scheduler</header>
-      <p className="now">{moment().format("dddd, MMMM, Do")}</p>
+      <Heading className="heading">Work Day Scheduler</Heading>
+      <Text className="now">{moment().format("dddd, MMMM, Do")}</Text>
     </div>
   );
 };

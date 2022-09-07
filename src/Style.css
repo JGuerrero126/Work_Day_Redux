@@ -1,9 +1,9 @@
 body {
-  background-color: cadetblue;
+  background-color: mintcream;
 }
 
 .heading {
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -21,61 +21,46 @@ body {
 }
 
 .timeBlock {
-  display: block;
-  text-align: center;
-  white-space: pre-wrap;
-  height: 5rem;
+  justify-content: center;
   margin-bottom: 0.5rem;
+  display: flex;
 }
 
 .timeArea {
-  display: inline-block;
   width: 5rem;
-  height: inherit;
-  background-color: aquamarine;
+  height: 5rem;
+  background-color: darksalmon;
   text-align: center;
-  border-top: 0.1rem dashed black;
   border-right: 0.1rem solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 3rem;
 }
 
 .timeText {
   min-width: 50%;
-  height: inherit;
   background: transparent;
   border: none;
   resize: none;
   white-space: pre-wrap;
-  color: #000000;
-  margin-bottom: -3.25rem;
-}
-
-.timeButton {
-  /* display: inline-block; */
-  width: 5rem;
-  height: inherit;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
-  margin-bottom: -4rem;
-}
-
-.timeButton:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+  color: black;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .past {
   background-color: #d3d3d3;
-  color: white;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+}
+.foot {
+  position: fixed;
+  bottom: 0;
+  font-size: 1rem;
 }

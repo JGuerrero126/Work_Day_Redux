@@ -1,22 +1,22 @@
-import { Box, Button, Textarea, Text, Center, Grid } from "@chakra-ui/react";
-import React, { useEffect } from "react";
-import moment from "moment";
+import { Box, Text, SimpleGrid, Input } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { timeCheck } from "../timeCheck";
 
 const TimeBlock = ({ time, index }) => {
-  const timeCheck = (el) => {
-    var Current = parseInt(moment().format("HH"));
-    const timeToCheck = parseInt(el.attributes[0].value);
-    console.log(Current);
-    console.log(timeToCheck);
+  const handleChange = (event) => {
+    const { value } = event.target;
 
-    if (timeToCheck < Current) {
-      el.classList.add("past");
-    } else if (timeToCheck === Current) {
-      el.classList.add("present");
-    } else if (timeToCheck > Current) {
-      el.classList.add("future");
-    }
+    setValue(value);
+
+    localStorage.setItem(index, value);
   };
+
+  const getSavedInfo = () => {
+    const info = localStorage.getItem(index);
+    setValue(info);
+  };
+
+  const [value, setValue] = useState("");
 
   useEffect(() => {
     const currentEl = document.getElementById(index);
@@ -26,14 +26,22 @@ const TimeBlock = ({ time, index }) => {
     }, 60000);
   }, [index]);
 
+  useEffect(() => {
+    getSavedInfo();
+  }, []);
+
   return (
-    <div className="timeBlock">
+    <SimpleGrid className="timeBlock">
       <Box className="timeArea">
         <Text currenttime={time}>{time}</Text>
       </Box>
-      <Textarea id={index} data-index={index} className="timeText" />
-      <Button className="timeButton">TEST</Button>
-    </div>
+      <Input
+        id={index}
+        className="timeText"
+        onChange={handleChange}
+        value={value}
+      />
+    </SimpleGrid>
   );
 };
 
