@@ -5,7 +5,7 @@ import React from "react";
 const Header = () => {
   return (
     <div>
-      <Heading className="heading">Work Day Scheduler</Heading>
+      <Heading className="heading">Day Planner Redux</Heading>
       <Text className="now">{moment().format("dddd, MMMM, Do")}</Text>
     </div>
   );
