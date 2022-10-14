@@ -1,5 +1,5 @@
 body {
-  background-color: mintcream;
+  background-color: papayawhip;
 }
 
 .heading {
@@ -49,15 +49,15 @@ body {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #e4e4e4;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #f88983;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #8ad38a;
 }
 .foot {
   position: fixed;
